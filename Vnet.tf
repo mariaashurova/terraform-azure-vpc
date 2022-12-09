@@ -4,7 +4,7 @@ resource "azurerm_virtual_network" "wordpress" {
   location            = var.location
   resource_group_name = azurerm_resource_group.wordpress.name
   tags                = {
-    vVERSION = 1.0.0 }
+    vVERSION = "v1.0.0" }
 
 }
 
