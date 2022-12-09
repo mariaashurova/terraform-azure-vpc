@@ -10,6 +10,7 @@ variable "tags" {
 
   default = {
     environment = "DevOps"
+    verion = "v1.0"
   }
 }
 
