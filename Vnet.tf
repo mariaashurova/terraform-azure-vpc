@@ -3,7 +3,8 @@ resource "azurerm_virtual_network" "wordpress" {
   address_space       = var.cidr_block
   location            = var.location
   resource_group_name = azurerm_resource_group.wordpress.name
-  tags                = var.tags
+  tags                = "VERSION"
+
 }
 
 resource "azurerm_subnet" "wordpress" {
@@ -19,5 +20,5 @@ resource "azurerm_public_ip" "wordpress" {
   resource_group_name = azurerm_resource_group.wordpress.name
   allocation_method   = "Static"
   domain_name_label   = random_string.fqdn.result
-  tags                = var.tags
+  tags                = "VERSION"
 }
