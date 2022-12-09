@@ -3,8 +3,8 @@ resource "azurerm_virtual_network" "wordpress" {
   address_space       = var.cidr_block
   location            = var.location
   resource_group_name = azurerm_resource_group.wordpress.name
-  tags                = {
-    vVERSION = "v1.0.0" }
+  tags                = [
+    version = "1.10" ]
 
 }
 
